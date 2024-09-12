@@ -5,12 +5,14 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
   textFont(courierFont)
 }
 
 function draw() {
   background(125);
-  fill("blue")
-  text("House", width/2, height/2)
+  fill("blue");
+  text("House", 100, 100);
+  fill("white");
+  text("of Leaves", 100, 115);
 }
