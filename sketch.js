@@ -1,19 +1,23 @@
-let courierFont
-let loc1 = 10
+let courierFont;
+let loc1 = 10; //determines the x value of the poem that begins with "Little solace comes to those..."
+let myhouse; //image of house
 
 function preload() {
-  courierFont = loadFont("assets/CourierPrime-Regular.ttf");
+  courierFont = loadFont("assets/CourierPrime-Regular.ttf"); //font of the site's text
+  myhouse = loadImage("assets/myhouse copy.png"); //preloads the house image
+
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight); //makes the width + height of the canvas the size of the window
   textFont(courierFont);
-  //textSize(35);
+  
 
 }
 
 function draw() {
   background(252, 238, 215);
+  image(myhouse, 300, 200);
 
   //test
   //----
@@ -34,7 +38,7 @@ function draw() {
   fill("black")
   rect(89, 30, 240, 240);
   fill(101,112,174); //changes the text color of "House" to blue, RGB color code
-  textSize(35);
+  textSize(35); //size of the text in the black square
   text("House", 100, 100);
   fill("white");
   textSize(35);
