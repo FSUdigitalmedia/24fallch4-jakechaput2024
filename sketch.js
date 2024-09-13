@@ -11,13 +11,16 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight); //makes the width + height of the canvas the size of the window
   textFont(courierFont);
-  
 
 }
 
 function draw() {
   background(252, 238, 215);
-  image(myhouse, 300, 200);
+  fill(252, 238, 215)
+  rect(400, 1050, 460, 600);
+  image(myhouse, 420, 1070); //house image on bottom of screen
+
+  
 
   //test
   //----
