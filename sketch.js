@@ -32,7 +32,7 @@ function draw() {
   }
 
   fill("black")
-  rect(89, 30, 215, 240);
+  rect(89, 30, 240, 240);
   fill(101,112,174); //changes the text color of "House" to blue, RGB color code
   textSize(35);
   text("House", 100, 100);
