@@ -18,6 +18,7 @@ function draw() {
   background(252, 238, 215);
   fill(252, 238, 215)
   rect(400, 1050, 460, 600);
+  line(600, 1050, 600, 0)
   image(myhouse, 420, 1070); //house image on bottom of screen
 
   
