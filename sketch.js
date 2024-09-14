@@ -1,10 +1,13 @@
 let courierFont;
 let loc1 = 10; //determines the x value of the poem that begins with "Little solace comes to those..."
 let myhouse; //image of house
+let compassmouse; //mouse cursor
+let loc2 = 0 //y value of text
 
 function preload() {
   courierFont = loadFont("assets/CourierPrime-Regular.ttf"); //font of the site's text
   myhouse = loadImage("assets/myhouse copy.png"); //preloads the house image
+  compassmouse = loadImage("assets/tinycompass1 copy.png");
 
 }
 
@@ -21,9 +24,7 @@ function draw() {
   line(600, 1050, 600, 0)
   image(myhouse, 420, 1070); //house image on bottom of screen
 
-  
-
-  //test
+  //Little solace poem
   //----
   fill("black")
   textSize(12);
@@ -39,6 +40,19 @@ function draw() {
     loc1 = 0;
   }
 
+  //text flipped on side
+  //----
+  push();
+  translate(200, 1200);
+  rotate(radians(270));
+  fill("black");
+  textSize(16);
+  text('The halls of the house on Ash Tree Lane twist and wind and develop into a seedy, black underbelly', loc2, 0);
+  loc2 = loc2 + 2
+  pop();
+
+  //house of leaves logo
+  //----
   fill("black")
   rect(89, 30, 240, 240);
   fill(101,112,174); //changes the text color of "House" to blue, RGB color code
@@ -48,5 +62,9 @@ function draw() {
   textSize(35);
   text("of Leaves", 100, 135);
 
+  image(compassmouse, mouseX, mouseY); //changes cursor to compass
+
   
+  
+
 }
