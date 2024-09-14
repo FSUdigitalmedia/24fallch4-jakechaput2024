@@ -49,6 +49,9 @@ function draw() {
   textSize(16);
   text('The halls of the house on Ash Tree Lane twist and wind and develop into a seedy, black underbelly', loc2, 0);
   loc2 = loc2 + 2
+  if (loc2 > height) {
+    loc2 = 0;
+  }
   pop();
 
   //house of leaves logo
