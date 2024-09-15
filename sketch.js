@@ -2,19 +2,23 @@ let courierFont;
 let loc1 = 10; //determines the x value of the poem that begins with "Little solace comes to those..."
 let myhouse; //image of house
 let compassmouse; //mouse cursor
-let loc2 = 0 //y value of text
-let loc3 = 0 //y value, oh boy im gonna have to make a lot of these aren't i?
-let loc4 = 0 //y value
-let loc5 = 0 //y
-let loc6 = 0 //y
-let loc7 = 0 //y
-let loc8 = 0 //y
+let loc2 = 0; //y value of text
+let loc3 = 0; //y value, oh boy im gonna have to make a lot of these aren't i?
+let loc4 = 0; //y value
+let loc5 = 0; //y
+let loc6 = 0; //y
+let loc7 = 0; //y
+let loc8 = 0; //y
+let spiral;
+let deg = 0;
+//let angle = map2(y, 0, height, 0, TWO_PI, QUADRATIC, BOTH);
 
 
 function preload() {
   courierFont = loadFont("assets/CourierPrime-Regular.ttf"); //font of the site's text
   myhouse = loadImage("assets/myhouse copy.png"); //preloads the house image
   //compassmouse = loadImage("assets/tinycompass1 copy.png");
+  spiral = loadImage("assets/nautilusspiral.png") //spiral image, it gonna spin
 
 }
 
@@ -30,6 +34,13 @@ function draw() {
   rect(400, 1050, 460, 600);
   line(600, 1050, 600, 0)
   image(myhouse, 420, 1070); //house image on bottom of screen
+  
+  push();
+  translate(1550, 1100);
+  rotate(radians(frameCount));
+  imageMode(CENTER)
+  image(spiral, 0, 0);
+  pop();
 
   //Little solace poem
   //----
