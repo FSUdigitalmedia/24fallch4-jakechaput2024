@@ -18,6 +18,8 @@ let loc12 = 0; //y
 let loc13 = 0; //y
 let loc14 = 0; //why am i doing this to myself
 let loc15 = 0;
+let houseloc = 100;
+
 
 function preload() {
   courierFont = loadFont("assets/CourierPrime-Regular.ttf"); //font of the site's text
@@ -267,7 +269,14 @@ function draw() {
     fill(101,112,174);
   } //changes the text color of "House" to blue, RGB color code
   textSize(35); //size of the text in the black square
-  text("House", 100, 100);
+  text("House", houseloc, 100);
+  if (mouseIsPressed === true) {
+    houseloc = houseloc + 3
+    if (houseloc > 105) {
+      houseloc = 100
+    }
+  
+  }
   fill("white");
   textSize(35);
   text("of Leaves", 100, 135);
