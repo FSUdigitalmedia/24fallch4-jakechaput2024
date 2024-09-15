@@ -9,7 +9,7 @@ let loc5 = 0; //y
 let loc6 = 0; //y
 let loc7 = 0; //y
 let loc8 = 0; //y
-let spiral;
+let spiral; //spiral in corner
 let deg = 0;
 let loc9 = 0; //y
 let loc10 = 0; //y
@@ -19,13 +19,16 @@ let loc13 = 0; //y
 let loc14 = 0; //why am i doing this to myself
 let loc15 = 0;
 let houseloc = 100;
-
+let maze;
+let mazepos1 = 0 //x-value
+let mazepos2 = 1200 //y-value
 
 function preload() {
   courierFont = loadFont("assets/CourierPrime-Regular.ttf"); //font of the site's text
   myhouse = loadImage("assets/myhouse copy.png"); //preloads the house image
   //compassmouse = loadImage("assets/tinycompass1 copy.png");
   spiral = loadImage("assets/nautilusspiral.png"); //spiral image, it gonna spin
+  maze = loadImage("assets/maze.png");
 
 }
 
@@ -259,6 +262,16 @@ function draw() {
   }
   pop();
   
+  //---- maze texture that scrolls up when mouse pressed
+  
+  image(maze, -100, mazepos2);
+  if (mouseIsPressed === true){
+    mazepos2 = mazepos2 +- 8
+    if (mazepos2 > height){
+      mazepos2 = 1200;
+    }
+  }
+
   //house of leaves logo
   //----
   fill("black")
