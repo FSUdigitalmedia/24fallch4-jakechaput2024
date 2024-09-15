@@ -36,7 +36,7 @@ function draw() {
   image(myhouse, 420, 1070); //house image on bottom of screen
   
   push();
-  translate(1550, 1100);
+  translate(1700, 1350);
   rotate(radians(frameCount));
   imageMode(CENTER)
   image(spiral, 0, 0);
