@@ -16,7 +16,8 @@ let loc10 = 0; //y
 let loc11 = 0; //y
 let loc12 = 0; //y
 let loc13 = 0; //y
-let myText;
+let loc14 = 0; //why am i doing this to myself
+let loc15 = 0;
 
 function preload() {
   courierFont = loadFont("assets/CourierPrime-Regular.ttf"); //font of the site's text
@@ -231,6 +232,30 @@ function draw() {
   }
   pop();
 
+  //----
+  push();
+  translate(250, 215);
+  rotate(radians());
+  fill("black");
+  textSize(24);
+  text('Like a flytrap, the Navidson Record awaits with its maw gaping open, alluring more and more curious enthusiasts', loc14, 0);
+  loc14 = loc14 + 7
+  if (loc14 > width) {
+    loc14 = 0;
+  }
+  pop();
+
+  //----
+  push();
+  translate(-20, 500);
+  fill("black");
+  textSize(30);
+  text('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX)', loc15, 0);
+  loc15 = loc15 + 1
+  if (loc15 < 100) {
+    loc15 = 0;
+  }
+  pop();
   
   //house of leaves logo
   //----
