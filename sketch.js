@@ -237,7 +237,7 @@ function draw() {
   fill("black")
   rect(89, 30, 240, 240);
   if (mouseIsPressed === true) {
-    fill(255,0,0);
+    fill(237, 66, 66);
   } else { 
     fill(101,112,174);
   } //changes the text color of "House" to blue, RGB color code
