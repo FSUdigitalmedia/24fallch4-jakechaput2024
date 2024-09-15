@@ -11,26 +11,113 @@ let loc7 = 0; //y
 let loc8 = 0; //y
 let spiral;
 let deg = 0;
-//let angle = map2(y, 0, height, 0, TWO_PI, QUADRATIC, BOTH);
-
+let loc9 = 0; //y
+let loc10 = 0; //y
+let loc11 = 0; //y
+let loc12 = 0; //y
+let loc13 = 0; //y
+let myText;
 
 function preload() {
   courierFont = loadFont("assets/CourierPrime-Regular.ttf"); //font of the site's text
   myhouse = loadImage("assets/myhouse copy.png"); //preloads the house image
   //compassmouse = loadImage("assets/tinycompass1 copy.png");
-  spiral = loadImage("assets/nautilusspiral.png") //spiral image, it gonna spin
+  spiral = loadImage("assets/nautilusspiral.png"); //spiral image, it gonna spin
 
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight); //makes the width + height of the canvas the size of the window
+  background(252, 238, 215);
   textFont(courierFont);
-
+  
 }
 
 function draw() {
   background(252, 238, 215);
-  fill(252, 238, 215)
+  
+
+  //----
+  push();
+  translate(670, 200);
+  rotate(radians(90));
+  fill("black");
+  textSize(25);
+  text('Just as great literary heroes ventured into the unknown, the darkest depths of their known world(75), like Odysseus, Aeneas, Dante(76, 77), whose journey brought them far from home. Unlike them, Navidsons home transforms into this dangerous realm', loc9, 0);
+  loc9 = loc9 + 5
+  if (loc9 > height) {
+    loc9 = 0;
+  }
+  pop();
+
+  //----
+  push();
+  translate(690, 0);
+  rotate(radians(90));
+  fill("black");
+  textSize(21);
+  text('the home which comfort is devoid in, the restless rest which plagues the eyes of Holloway over his lost crew member. This moment in the film marks a considerable change in his demeanor, his is uncharacteristically aggressive at Will towards the climax of the film. The change in demeanor marks the ultimate shift in their relationship', loc10, 0);
+  loc10 = loc10 + 7
+  if (loc10 > height) {
+    loc10 = 0;
+  }
+  pop();
+
+  //----
+  push();
+  translate(710, 13);
+  rotate(radians(90));
+  fill("black");
+  textSize(19);
+  text('"And their hopes and dreams were quickly abandoned in the face of the danger presented before them"(331), "And for the requiem of which could not be described met them in their place of safety and comfort"(332), these quotes made by famous poet', loc11, 0);
+  loc11 = loc11 + 4.5
+  if (loc11 > height) {
+    loc11 = 0;
+  }
+  pop();
+
+  //----
+  push();
+  translate(750, 0);
+  rotate(radians(90));
+  fill("black");
+  textSize(23);
+  text('of the imagined and unimagined. The media becomes a format with which to explore the absurdity of our world. The changes in the medium lend themselves to more creative uses.', loc12, 0);
+  loc12 = loc12 + 7
+  if (loc12 > height) {
+    loc12 = 0;
+  }
+  pop();
+
+  //----
+  push();
+  translate(770, 0);
+  rotate(radians(90));
+  fill("black");
+  textSize(19);
+  text('the unimaginable becomes the imaginable, its reality brought into existence formed from the combined minds and skills with the medium the creator uses.', loc13, 0);
+  loc13 = loc13 + 7
+  if (loc13 > height) {
+    loc13 = 0;
+  }
+  pop();
+
+  //---- non sum qualis eram
+  fill("black");
+  textSize(45);
+  text('non', 1750, 200)
+
+  textSize(45);
+  text('sum', 1750, 230)
+
+  textSize(45);
+  text('qualis', 1700, 260)
+
+  textSize(45);
+  text('eram', 1730, 290)
+
+
+  fill(252, 238, 215);
   rect(400, 1050, 460, 600);
   line(600, 1050, 600, 0)
   image(myhouse, 420, 1070); //house image on bottom of screen
@@ -144,20 +231,25 @@ function draw() {
   }
   pop();
 
+  
   //house of leaves logo
   //----
   fill("black")
   rect(89, 30, 240, 240);
-  fill(101,112,174); //changes the text color of "House" to blue, RGB color code
+  if (mouseIsPressed === true) {
+    fill(255,0,0);
+  } else { 
+    fill(101,112,174);
+  } //changes the text color of "House" to blue, RGB color code
   textSize(35); //size of the text in the black square
   text("House", 100, 100);
   fill("white");
   textSize(35);
   text("of Leaves", 100, 135);
 
-  //image(compassmouse, mouseX, mouseY); //changes cursor to compass
 
-  
-  
+
+
+
 
 }
