@@ -111,16 +111,16 @@ function draw() {
   //---- non sum qualis eram
   fill("black");
   textSize(45);
-  text('non', 1700, 200)
+  text('non', 1600, 200)
 
   textSize(45);
-  text('sum', 1700, 230)
+  text('sum', 1600, 230)
 
   textSize(45);
-  text('qualis', 1650, 260)
+  text('qualis', 1550, 260)
 
   textSize(45);
-  text('eram', 1700, 290)
+  text('eram', 1600, 290)
 
 
   fill(252, 238, 215);
