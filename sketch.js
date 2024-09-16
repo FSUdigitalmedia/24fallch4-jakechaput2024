@@ -21,7 +21,7 @@ let loc15 = 0;
 let houseloc = 100;
 let maze;
 let mazepos1 = 0 //x-value
-let mazepos2 = 1200 //y-value
+let mazepos2 = 900 //y-value
 
 function preload() {
   courierFont = loadFont("assets/CourierPrime-Regular.ttf"); //font of the site's text
@@ -268,7 +268,7 @@ function draw() {
   if (mouseIsPressed === true){
     mazepos2 = mazepos2 +- 8
     if (mazepos2 > height){
-      mazepos2 = 1200;
+      mazepos2 = 900;
     }
   }
 
