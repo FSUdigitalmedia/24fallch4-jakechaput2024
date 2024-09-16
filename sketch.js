@@ -267,9 +267,6 @@ function draw() {
   image(maze, -100, mazepos2);
   if (mouseIsPressed === true){
     mazepos2 = mazepos2 +- 8
-    if (mazepos2 > height){
-      mazepos2 = 1200;
-    }
   }
 
   //house of leaves logo
