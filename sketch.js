@@ -111,16 +111,16 @@ function draw() {
   //---- non sum qualis eram
   fill("black");
   textSize(45);
-  text('non', 1750, 200)
+  text('non', 1450, 200)
 
   textSize(45);
-  text('sum', 1750, 230)
+  text('sum', 1450, 230)
 
   textSize(45);
-  text('qualis', 1700, 260)
+  text('qualis', 1400, 260)
 
   textSize(45);
-  text('eram', 1730, 290)
+  text('eram', 1430, 290)
 
 
   fill(252, 238, 215);
@@ -249,7 +249,7 @@ function draw() {
     loc14 = 0;
   }
   pop();
-
+  
   //----
   push();
   translate(-20, 500);
@@ -267,6 +267,9 @@ function draw() {
   image(maze, -100, mazepos2);
   if (mouseIsPressed === true){
     mazepos2 = mazepos2 +- 8
+    if (mazepos2 > height){
+      mazepos2 = 1200;
+    }
   }
 
   //house of leaves logo
